@@ -6,14 +6,15 @@
         - @product.errors.full_messages.each do |msg|
           %li= msg
 
+          
   .field
     = f.label :name
-    = f.text_field :name
+    = f.text_field :name, class: "form-control"
   .field
     = f.label :price
-    = f.text_field :price
+    = f.text_field :price, class: "form-control"
   .field
     = f.label :image
-    = f.file_field :image
+    %p= f.file_field :image
   .actions
-    = f.submit 'Save'
+    = f.submit 'Save', class: "btn btn-info"
